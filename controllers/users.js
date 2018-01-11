@@ -38,7 +38,6 @@ exports.createUser = (req, res, next) => {
 	}
 
 	const newUser = new User(userData)
-	console.log(newUser)
 	newUser.save((err) => {
 		if (err) return next(err)
 		return res.json(newUser)
